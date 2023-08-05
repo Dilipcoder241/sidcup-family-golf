@@ -3,8 +3,10 @@ const cursorBlur = document.getElementById('cursorBlur');
 const h4All = document.querySelectorAll('#nav h4');
 
 document.addEventListener("mousemove" , function(dot){
-    cursor.style.top = dot.y+2 +"px";
-    cursor.style.left = dot.x +2+'px';
+    
+    console.log(dot.clientX,dot.clientY);
+    cursor.style.top = dot.y-10 +"px";
+    cursor.style.left = dot.x -10+'px';
     cursorBlur.style.top = dot.y - 200 +"px";
     cursorBlur.style.left = dot.x - 200+'px';
 
